@@ -9,6 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var textfield: UITextField!
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let resultViewController:ResultViewController = segue.destination as! ResultViewController
+            
+        resultViewController.argString = textfield.text!
+
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,4 +29,5 @@ class ViewController: UIViewController {
 
 
 }
+
 
